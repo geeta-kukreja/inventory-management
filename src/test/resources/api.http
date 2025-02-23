@@ -1,0 +1,42 @@
+### Add a New Item (POST)
+POST http://localhost:8080/items
+Content-Type: application/json
+
+{
+  "name": "Laptop Stand",
+  "quantity": 15,
+  "price": 12.00
+}
+
+###  Get All Items (GET)
+GET http://localhost:8080/items
+
+###  Get an Item by ID (GET)
+GET http://localhost:8080/items/1
+
+###  Update an Item (PUT)
+PUT http://localhost:8080/items/1
+Content-Type: application/json
+
+{
+  "name": "Gaming Laptop",
+  "quantity": 8,
+  "price": 1500.00
+}
+
+### Delete an Item (DELETE)
+DELETE http://localhost:8080/items/1
+
+### Try to Get an Item That Doesn't Exist (Expect 404)
+GET http://localhost:8080/items/999
+
+
+###  Increase Item Quantity
+PUT http://localhost:8080/items/2/increase?amount=5
+
+###  Decrease Item Quantity
+PUT http://localhost:8080/items/2/decrease?amount=3
+
+###  Check if Item is In Stock
+GET http://localhost:8080/items/2/in-stock
+
