@@ -75,6 +75,7 @@ The application runs on: http://localhost:8080
 ```
 ### **Get All Items**
 📌 GET /items
+
 📌 Response:
 
 ```sh
@@ -89,7 +90,8 @@ The application runs on: http://localhost:8080
 ```
 ### **Get an Item by ID**
 📌 GET /items/{id}
-📌 Example: /items/1
+
+Example: /items/1
 
 ### **Update an Item**
 📌 PUT /items/{id}
@@ -102,14 +104,17 @@ The application runs on: http://localhost:8080
 ```
 ### **Increase Item Quantity**
 📌 PUT /items/{id}/increase?amount=5
+
 📌 Example: /items/1/increase?amount=5
 
 ### **Decrease Item Quantity**
 📌 PUT /items/{id}/decrease?amount=3
+
 📌 Example: /items/1/decrease?amount=3
 
 ### **Delete an Item**
 📌 DELETE /items/{id}
+
 📌 Example: /items/1
 
 ### ** Running Tests**
