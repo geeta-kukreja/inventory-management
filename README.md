@@ -51,6 +51,73 @@ mvn spring-boot:run
 ```
 
 The application runs on: http://localhost:8080
+
+## API Endpoints (Test with Postman or IntelliJ HTTP Client)
+### **Add an Item**
+📌 POST /items
+
+```sh
+{
+  "name": "Laptop",
+  "quantity": 10,
+  "price": 1200.00
+}
+```
+📌 Response:
+```sh
+
+{
+  "id": 1,
+  "name": "Laptop",
+  "quantity": 10,
+  "price": 1200.00
+}
+```
+### **Get All Items**
+📌 GET /items
+📌 Response:
+
+```sh
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "quantity": 10,
+    "price": 1200.00
+  }
+]
+```
+### **Get an Item by ID**
+📌 GET /items/{id}
+📌 Example: /items/1
+
+### **Update an Item**
+📌 PUT /items/{id}
+```sh
+{
+  "name": "Gaming Laptop",
+  "quantity": 15,
+  "price": 1500.00
+}
+```
+### **Increase Item Quantity**
+📌 PUT /items/{id}/increase?amount=5
+📌 Example: /items/1/increase?amount=5
+
+### **Decrease Item Quantity**
+📌 PUT /items/{id}/decrease?amount=3
+📌 Example: /items/1/decrease?amount=3
+
+### **Delete an Item**
+📌 DELETE /items/{id}
+📌 Example: /items/1
+
+### ** Running Tests**
+To run JUnit and MockMvc tests, execute:
+
+```sh
+mvn test
+```
 ### **Example in api.http file to test and src/tests directory**
 
 
